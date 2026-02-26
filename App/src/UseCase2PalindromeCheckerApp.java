@@ -1,26 +1,31 @@
 /*
  * Application Name: PalindromeChecker App
  * Version: 1.0
- * Description: Console-based application to check whether a given string is a palindrome.
+ * Use Case 2: Print Hardcoded Palindrome Result
  */
 
-public class UseCase1PalindromeCheckerApp {
+public class UseCase2PalindromeCheckerApp {
 
     // Main method - Entry point of the application
     public static void main(String[] args) {
 
-        // Display Welcome Message
-        System.out.println("========================================");
-        System.out.println("      Welcome to PalindromeChecker App ");
-        System.out.println("========================================");
-        System.out.println("Application Name : PalindromeChecker App");
-        System.out.println("Version          : 1.0");
-        System.out.println("----------------------------------------");
-        System.out.println("This application checks whether a given");
-        System.out.println("string is a palindrome.");
-        System.out.println("========================================");
+        // Hardcoded string literal
+        String word = "madam";
 
-        // Program continues to next use case (placeholder)
-        System.out.println("System Ready...");
+        // Reverse the string
+        String reversed = "";
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        // Check if palindrome using conditional statement
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+
+        // Program exits
     }
 }
